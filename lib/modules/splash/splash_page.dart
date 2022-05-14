@@ -14,7 +14,7 @@ class _SplashPageState extends State<SplashPage> {
     super.initState();
 
     Future.delayed(Duration(seconds: 3), () {
-      Navigator.pushReplacementNamed(context, '/');
+      Navigator.pushReplacementNamed(context, '/home');
     });
   }
 
@@ -22,14 +22,14 @@ class _SplashPageState extends State<SplashPage> {
   Widget build(BuildContext context) {
     // Loading with image
     return Scaffold(
-      backgroundColor: Colors.black, // Green color
+      backgroundColor: Color(0xFFF1EEA0), // Green color
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Image.network(
-                'https://avatars.githubusercontent.com/t/4684049?s=280&v=4'),
-            const SizedBox(height: 20),
+            Image.asset(
+                'assets/logo_green.png', scale: 1.2,),
+            const SizedBox(height: 60),
             const CircularProgressIndicator(),
           ],
         ),

@@ -1,3 +1,5 @@
+import 'package:biochar_maps/modules/home/menu_page.dart';
+import 'package:biochar_maps/modules/route/route_setup_page.dart';
 import 'package:biochar_maps/modules/splash/splash_page.dart';
 import 'package:flutter/material.dart';
 
@@ -16,12 +18,14 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Biochar Rotas',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
       ),
       initialRoute: '/splash',
       routes: {
         '/splash': (context) => const SplashPage(),
-        '/': (context) => const MapsView(),
+        '/home' : (context) => const MenuPage(),
+        '/setup' : (context) => const RouteSetupPage(),
+        '/map': (context) => const MapsView(),
       },
     );
   }
